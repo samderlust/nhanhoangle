@@ -143,7 +143,7 @@ section.section-contact {
   justify-content: center;
   align-items: center; }
   section.section-contact .contact__background {
-    background-image: url(../img/contact.jpg);
+    background-image: linear-gradient(to right, rgba(0, 123, 187, 0.5), rgba(102, 203, 255, 0.8)), url(../img/contact.jpg);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -161,7 +161,7 @@ section.section-contact {
     align-self: flex-start;
     height: 100%;
     position: absolute;
-    width: 30%; }
+    padding: 0 3rem; }
     section.section-contact .contact__info ul li {
       color: #007bbb;
       font-size: 2.5rem;
@@ -250,7 +250,11 @@ section.section-contact {
   margin: 0 1rem;
   border-radius: 4px;
   max-width: 30rem;
-  min-height: 40rem; }
+  min-height: 40rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5);
+  transition: all .3s; }
+  .package__item:hover {
+    transform: translateY(1rem); }
 
 .package__icon {
   font-size: 7rem;
@@ -559,7 +563,7 @@ section.section-contact {
   justify-content: center;
   align-items: center;
   background-color: #f7f7f7;
-  min-height: 60vh;
+  min-height: 50rem;
   padding: 2rem; }
   .section:not(.hero):nth-child(even) {
     background-color: #eef3f8; }
