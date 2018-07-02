@@ -134,6 +134,40 @@ body {
   align-items: center;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5)), url(../img/package.jpg); }
 
+section.section-contact {
+  position: relative;
+  height: 100%;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  section.section-contact .contact__background {
+    background-image: url(../img/contact.jpg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+    flex: 1; }
+  section.section-contact .contact__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    align-self: flex-start;
+    height: 100%;
+    position: absolute;
+    width: 30%; }
+    section.section-contact .contact__info ul li {
+      color: #007bbb;
+      font-size: 2.5rem;
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 168, 255, 0.5); }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -219,9 +253,10 @@ body {
   min-height: 40rem; }
 
 .package__icon {
-  font-size: 5rem;
-  color: #00a8ff;
-  margin-bottom: 2rem; }
+  font-size: 7rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.5); }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
