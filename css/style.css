@@ -59,6 +59,7 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +68,7 @@ body {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 3.5rem;
+    letter-spacing: 2rem;
     animation: moveInLeft 1s linear .5s;
     animation-fill-mode: backwards;
     text-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.3); }
@@ -75,7 +76,8 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.73rem;
+    letter-spacing: 1rem;
+    transform: translateX(-0.5rem);
     animation: moveInRight 1s linear .5s;
     animation-fill-mode: backwards;
     text-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.3); }
@@ -95,9 +97,10 @@ body {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading__tertiary {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #fff; }
 
 .paragraph {
   font-size: 1.6; }
@@ -127,16 +130,19 @@ body {
 .u-margin-top-medium {
   margin-top: 8rem !important; }
 
+.section-bio {
+  text-align: center; }
+
 .section-packages {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5)), url(../img/package.jpg); }
 
 section.section-contact {
   position: relative;
-  height: 100%;
+  min-height: 50rem;
   margin: 5rem;
   display: flex;
   flex-direction: column;
@@ -167,6 +173,29 @@ section.section-contact {
       font-size: 2.5rem;
       width: 100%;
       border-bottom: 1px solid rgba(0, 168, 255, 0.5); }
+      section.section-contact .contact__info ul li a {
+        list-style: none;
+        text-decoration: none; }
+    section.section-contact .contact__info-qcode {
+      height: 20rem; }
+  section.section-contact .fab {
+    margin-right: 1rem; }
+
+.section-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem; }
+  .section-project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+  .section-project img {
+    height: 8rem;
+    margin: 4rem 5rem; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -239,17 +268,28 @@ section.section-contact {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.package__title {
+  color: #fff; }
+
+.package__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; }
+
 .package__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   text-align: center;
-  background-color: #66cbff;
+  background-image: linear-gradient(to right bottom, #66cbff, #007bbb);
   padding: 2rem 1rem;
   margin: 0 1rem;
   border-radius: 4px;
-  max-width: 30rem;
+  width: 30rem;
   min-height: 40rem;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5);
   transition: all .3s; }
@@ -257,10 +297,19 @@ section.section-contact {
     transform: translateY(1rem); }
 
 .package__icon {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 7rem;
   color: #fff;
   margin-bottom: 2rem;
   text-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.5); }
+
+.package__text {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: #fff; }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -510,7 +559,7 @@ section.section-contact {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(102, 203, 255, 0.5), rgba(0, 123, 187, 0.5)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(102, 203, 255, 0.2), rgba(0, 123, 187, 0.2)), url(../img/hero.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -558,13 +607,8 @@ section.section-contact {
     width: calc(((100% - 3 * 6rem) / 4) *3 + 2 *6rem); }
 
 .section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   background-color: #f7f7f7;
-  min-height: 50rem;
-  padding: 2rem; }
+  padding: 3rem 5rem; }
   .section:not(.hero):nth-child(even) {
     background-color: #eef3f8; }
 
